@@ -23,18 +23,33 @@ include_once 'azurroheader.php';
 
                                   <input type="submit" id="submitbuton" value="Submit"><br><br>
                         </form>
-
+                        
                         <div class= "password">
-                        <?php
-                        //$enterpassword = mysqli_real_escape_string($link, $_REQUEST['enterpassword']);
-                        echo $_POST["enterpassword"];
-                        ?>
+                                <?php                       
+                                //echo $_POST["enterpassword"];
+                                $pass = 'ogi';
+                                
+                                    if($pass == $_POST["enterpassword"] )
+                                    {
+                                        //echo "Right password !" ;
+                                        header('Location: http://localhost:8080/azurro/index1.php');
+                                        //exit();   
+                                    }
+                                    else
+                                    {
+                                        echo "Wrong password !";
+                                    }
+                                ?>
                         </div>
 
                         
                 </div>  
     
 </body>
+</html>
+<?php
+include_once 'azurrofooter.php';
+?>
 </html>
 <?php
 include_once 'azurrofooter.php';
